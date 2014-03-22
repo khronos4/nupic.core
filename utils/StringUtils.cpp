@@ -358,7 +358,7 @@ boost::shared_array<Byte> StringUtils::toByteArray(const std::string& s, Size bi
   std::vector<Int> list;
   StringUtils::toIntList(s, list, true /*allowAll*/);
   if (list.empty())
-    return boost::shared_array<Byte>(0);
+    return boost::shared_array<Byte>();
           
   // Put this into the mask
   Size numBytes = (bitCount+7) / 8;
